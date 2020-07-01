@@ -1,0 +1,47 @@
+{% extends 'generator/basic.html' %}
+
+{% block title%} create question {% endblock %}
+
+{% block body%}
+<div class="row">
+    <div class="col-md-12">
+        <h3><cent-er>Create Questions</cent-er></h3>
+        <hr>
+        <div class="card card-body">
+            <table class="table table-sm">
+                <tr>
+                    <th>Question Id</th>
+                    <th>Enter the Question</th>
+                    <th>Subject</th>
+                    <th>Difficulty Level</th>
+                    <th>Unit No.</th>
+                    <th>Year</th>
+                    <th>Marks</th>
+                    <th>Module</th>
+                    <th>Semester</th>
+                    <th>Subject Code</th>
+                    <th>Update</th>
+                    <th>Remove</th>
+                </tr>
+                {% for addQ in adds %}
+                    <tr>
+                        <td>{{addQ.questionId}}</td>
+                        <td>{{addQ.EnterTheQuestion}}</td>
+                        <td>{{addQ.Subject}}</td>
+                        <td>{{addQ.DifficultLevel}}</td>
+                        <td>{{addQ.unitNo}}</td>
+                        <td>{{addQ.year}}</td>
+                        <td>{{addQ.Marks_alloted}}</td>
+                        <td>{{addQ.Module}}</td>
+                        <td>{{addQ.Semester}}</td>
+                        <td>{{addQ.Subject_code}}</td>
+                        <td><a class="btn btn-sm btn-info" href="/generator/updateQ/<int:pk>/">Update</a></td>
+                        <td><a class="btn btn-sm btn-danger" href="/generator/deleteQ">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

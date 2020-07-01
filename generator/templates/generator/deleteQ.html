@@ -1,0 +1,51 @@
+{% extends 'generator/basic.html' %}
+{% load static %}
+
+{% block title%} delete question {% endblock %}
+{% block css %}
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    opacity: 0.9;
+}
+.registerbtn {
+  background-color:blue;
+
+}
+.registerbtn:hover{
+ background-color:green;
+}
+
+{% endblock %}
+{% block body%}
+
+<center><h3> DELETE QUESTION</h3></center>
+     <div class="container">
+            <hr>
+                <label for="QuestionId"><br> Question ID </br> </label>
+                 <input type="text" Placeholder="Question ID" id="QuestionId" name="Qn" required>
+                <label for="EnterTheQuestion"><br> Enter The Question </br> </label>
+                <input type="text" Placeholder="Enter The Question" id="EnterTheQuestion" name="Etq" required>
+                <label for="Subject"><br> Subject</br></label>
+                <input type="text" placeholder="Subject" id="Subject" name="sub" required>
+
+<br>
+
+
+  <button type="Delete" class="registerbtn">DELETE</button>
+
+</div>
+{% endblock %}

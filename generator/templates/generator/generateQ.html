@@ -1,0 +1,60 @@
+{% extends 'generator/basic.html' %}
+
+{% block title%} Generate question {% endblock %}
+{% block css %}
+.registerbtn {
+  background-color:blue;
+
+}
+.registerbtn:hover{
+ background-color:green;
+}
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    opacity: 0.9;
+}
+
+
+{% endblock %}
+{% block body %}
+
+<center> <h3>GENERATE QUESTION PAPER</h3></center>
+    <div class="container">
+            <hr>
+                <label for="Subject"><br> Subject </br> </label>
+                 <input type="text" id="Subject" Placeholder="Subject" name="sb" required>
+		<label for="Branch"><br> Branch </br> </label>
+                 <input type="text" id="Branch" Placeholder="Branch" name="br" required>
+		<label for="Exam Type"><br>Exam Type </br> </label>
+                 <input type="text" id="Exam Type" Placeholder="Exam Type" name="Et" required>
+               <label for="Subject code"><br> Subject code </br> </label>
+                 <input type="text" id="Subject code" Placeholder="Subject code" name="sc" required>
+		<label for="Semester"><br> Semester </br> </label>
+                 <input type="text" id="Semester" Placeholder="Semester" name="se" required>
+		<label for="Year"><br> Year </br> </label>
+                 <input type="text" id="Year" Placeholder="Year" name="yr" required>
+		<label for="Duration"><br> Duration </br> </label>
+                 <input type="text" id="Duration" Placeholder="Duration" name="du" required>
+
+		<label for="Total Marks"><br>Total Marks </br> </label>
+                 <input type="text" id="Total Marks" Placeholder="Total Marks" name="tm" required>
+		<br> <button type="Generate Question Paper" class="registerbtn">Generate Question Paper</button>
+
+
+
+{% endblock %}
