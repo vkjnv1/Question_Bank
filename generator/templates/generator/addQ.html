@@ -38,10 +38,6 @@ input[type=text] {
 <form method="post" action="/generator/addQ/"> {% csrf_token %}
 	<hr>
 	<div class="form-group">
-		<label for="questionId">Question ID </label> <br>
-		<input type="text" id="questionId" Placeholder="Question ID" name="questionId" ><br>
-	</div>
-	<div class="form-group">
          <label for= "EnterTheQuestion">Enter The Question</label><br>
 		 <input type="text" id="EnterTheQuestion" Placeholder="Enter The Question" name="EnterTheQuestion" required><br>
 	</div>
@@ -49,34 +45,41 @@ input[type=text] {
 		<label for="Subject">Subject</label><br>
 		<input type="text" id="Subject" placeholder="Subject" name="Subject" required>
 	</div>
-<div class="container1">
-	<label for="DifficultLevel"> Difficult Level:</label>
-		<select id="DifficultLevel" name="Dl">
-    			<option value="Easy">Easy</option>
-   			 <option value="Medium">Medium</option>
-    			<option value="Difficult">Difficult</option>
-  			</select><br><br>
-			<label for="unitNo">Unit No:</label>
-  			<select id="unitNo" name="un">
-    				<option value="1">1</option>
-    				<option value="2">2</option>
-    				<option value="3">3</option>
-  			</select><br><br></div>
+<div class="form-group">
+	<label for="DifficultLevel"> Difficult Level:</label><br>
+	<input type="text" id="DifficultLevel" Placeholder="Enter Difficulty Level" name="DifficultLevel" required>
+
+	</div>
+
+	<div class="form-group">
+	<label for="unitNo"> Difficult Level:</label><br>
+	<input type="text" id="unitNo" Placeholder="Enter Unit No" name="unitNo" required>
+
+	</div>
+<div class="form-group">
 			<label for="year"><br>Year</label>
                         <input type="text" id="year" placeholder="Year" name="year" required><br>
+    </div>
+    <div class="form-group">
 		    <label for="Marks_alloted"><br> Marks Alloted</label>
 		<input type="text" id="Marks_alloted" placeholder="Marks" name="Marks_alloted" required><br>
+        </div>
+        <div class="form-group">
 	 <label for="Module"><br> Module</label>
                 <input type="text" id="Module" placeholder="Module" name="Module" required><br>
+            </div>
+            <div class="form-group">
        <label for="Semester"><br> Semester</label>
                 <input type="text" id="Semester" placeholder="Semester" name="Semester" required><br>
+                </div>
+                <div class="form-group">
         <label for="Subject_code"><br> Subject Code</label>
-                <input type="text" id="Subject_code" placeholder="Subject_code" name="sc" required>
+                <input type="text" id="Subject_code" placeholder="Enter Subject Code" name="Subject_code" required>
 <br>
-
+                    </div>
+<div class="form-group">
 	<button type="submit" class="registerbtn">Submit</button>
   		<button type="Exit" class="registerbtn">Exit</button>
      </div>
-</div>
 	</form>
 {% endblock %}
