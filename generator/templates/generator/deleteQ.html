@@ -31,21 +31,14 @@ input[type=text] {
 
 {% endblock %}
 {% block body%}
+<form method="POST" action="/generator/deleteQ/">
+    {% csrf_token %}
 
-<center><h3> DELETE QUESTION</h3></center>
-     <div class="container">
-            <hr>
-                <label for="QuestionId"><br> Question ID </br> </label>
-                 <input type="text" Placeholder="Question ID" id="QuestionId" name="Qn" required>
-                <label for="EnterTheQuestion"><br> Enter The Question </br> </label>
-                <input type="text" Placeholder="Enter The Question" id="EnterTheQuestion" name="Etq" required>
-                <label for="Subject"><br> Subject</br></label>
-                <input type="text" placeholder="Subject" id="Subject" name="sub" required>
-
-<br>
-
-
+    <center><h3> DELETE QUESTION</h3></center>
+    {{form}}
+    <div class="form-group">
   <button type="Delete" class="registerbtn">DELETE</button>
 
 </div>
+    </form>
 {% endblock %}
