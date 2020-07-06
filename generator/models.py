@@ -13,27 +13,30 @@ class Faculty(models.Model):
         return self.faculty_name
 
 class add(models.Model):
-    LEVEL = (
-        ('Easy', 'Easy'),
-        ('Medium', 'Medium'),
-        ('Difficult', 'Difficult'),
-    )
+    #LEVEL = (
+        #('Easy', 'Easy'),
+        #('Medium', 'Medium'),
+        #('Difficult', 'Difficult'),
+    #)
 
-    UNIT = (
-        ('1', '1'),
-        ('2', '2'),
-        ('3', '3'),
-    )
+    #UNIT = (
+        #('1', '1'),
+        #('2', '2'),
+        #('3', '3'),
+    #)
 
     questionId=models.AutoField(primary_key=True)
     EnterTheQuestion = models.CharField(max_length=200, null=True)
     Subject = models.CharField(max_length=200, null=True)
-    DifficultLevel =  models.CharField(max_length=200, null=True, choices=LEVEL)
-    unitNo =  models.CharField(max_length=200, null=True, choices=UNIT)
+    DifficultLevel =  models.CharField(max_length=200, null=True)
+    unitNo =  models.CharField(max_length=200, null=True)
     year = models.CharField(max_length=200, null=True)
     Marks_alloted = models.CharField(max_length=200, null=True)
     Module = models.CharField(max_length=200, null=True)
     Semester = models.CharField(max_length=200, null=True)
     Subject_code = models.CharField(max_length=200, null=True)
+
+
+
 
 
